@@ -43,3 +43,22 @@ docker push IMAGE [REPOSITORY[:TAG]]
 
 docker push mountainchan/test:v1
 ```
+
+# Remove an Image
+```
+docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+docker rmi -f mountainchan/test:v1
+```
+
+# Show containers
+```
+docker ps # containers are running
+
+docker ps -a # show all
+```
+
+# Stop/Start/Restart/Remove a containers
+```
+docker container start/stop/restart/rm [container id]
+```
