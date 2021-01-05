@@ -58,7 +58,17 @@ docker ps # containers are running
 docker ps -a # show all
 ```
 
-# Stop/Start/Restart/Remove a containers
+# Stop/Start/Restart/Remove a container
 ```
 docker container start/stop/restart/rm [container id]
+```
+
+# Stop/remove all containers
+```
+docker stop/rm $(docker ps -a -q)
+```
+
+# Remove all Images
+```
+docker rmi -f $(docker images -a -q)
 ```
