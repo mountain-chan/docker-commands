@@ -3,6 +3,16 @@ Some docker commands line
 
 # Basic commands
 
+## Remove all containers
+```
+docker rm -f $(docker ps -a -q)
+```
+
+## Remove all images
+```
+docker rmi -f $(docker images -q)
+```
+
 ## Search an image 
 ```
 docker search <key>
