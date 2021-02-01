@@ -27,7 +27,7 @@ docker pull <repository>
 ```
 docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
-docker run --name=mysqlCon -p 3306:3306 -d -e MYSQL_ROOT_PASSWORD=123456 mysql/mysql-server:5.7
+docker run --name=mysqlCon -p 3306:3306 -d -e MYSQL_ROOT_HOST=% -e MYSQL_ROOT_PASSWORD=123456 mysql/mysql-server:5.7
 ```
 
 ## Show logs a container
