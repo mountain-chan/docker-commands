@@ -124,3 +124,9 @@ docker run -itd --name=container2  --network network1 busybox
 docker attach container1
 ping 192.168.1.3
 ```
+
+## Đọc logs trong một container
+```
+docker exec  -it c4 cat logs/socketio.log
+```
+
