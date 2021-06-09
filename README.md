@@ -18,6 +18,24 @@ docker rmi -f $(docker images -q)
 docker search <key>
 ```
 
+## Build an image from container
+```
+docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+
+docker commit -m "upload" c3f279d17e0a  mountainchan/new-repo:tagname
+
+docker push mountainchan/new-repo:tagname
+```
+
+## Push an Image to docker hub
+```
+docker push IMAGE [REPOSITORY[:TAG]]
+
+docker tag local-image:tagname new-repo:tagname
+
+docker push mountainchan/new-repo:tagname
+```
+
 ## Pull an image
 ```
 docker pull <repository>
@@ -40,20 +58,6 @@ docker logs [container name]
 docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
 
 sudo docker exec -it mysqlCon mysql -uroot -p
-```
-
-## Build an image from container
-```
-docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
-
-docker commit -m "upload" c3f279d17e0a  mountainchan/test:v1
-```
-
-## Push an Image to docker hub
-```
-docker push IMAGE [REPOSITORY[:TAG]]
-
-docker push mountainchan/test:v1
 ```
 
 ## Remove an Image
