@@ -8,9 +8,19 @@ Some docker commands line
 docker rm -f $(docker ps -a -q)
 ```
 
+```
+$containers = docker ps -a -q
+foreach ($container in $containers) { docker rm $container -f }
+```
+
 ## Remove all images
 ```
 docker rmi -f $(docker images -q)
+```
+
+```
+$images = docker images -a -q
+foreach ($image in $images) { docker image rm $image -f }
 ```
 
 ## Search an image 
