@@ -23,6 +23,13 @@ $images = docker images -a -q
 foreach ($image in $images) { docker image rm $image -f }
 ```
 
+## Save docker images and load docker images from file .tar
+```
+docker save -o [path]/<file_name>.tar images_name:tag new_images_name:tag
+
+docker load -i [path]/<file_name>.tar
+```
+
 ## Search an image 
 ```
 docker search <key>
